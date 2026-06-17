@@ -53,6 +53,16 @@
 
     render();
     timer = setInterval(render, 1000);
+
+    /* Performance: pausa o contador quando a aba está oculta (economiza CPU/bateria) */
+    document.addEventListener('visibilitychange', function(){
+      if (document.hidden){
+        clearInterval(timer);
+      } else {
+        render();
+        timer = setInterval(render, 1000);
+      }
+    });
   })();
 
   /* --------------------------------------------------------
@@ -117,6 +127,12 @@
     document.addEventListener('keydown', function(e){
       if (e.key === 'Escape' && nav.classList.contains('nav--open')) setMenu(false);
     });
+
+    /* Fecha o menu ao voltar para desktop (evita estado preso ao girar/redimensionar) */
+    var mq = window.matchMedia('(min-width:761px)');
+    function handleMq(e){ if (e.matches) setMenu(false); }
+    if (mq.addEventListener){ mq.addEventListener('change', handleMq); }
+    else if (mq.addListener){ mq.addListener(handleMq); }   /* fallback navegadores antigos */
   })();
 
   /* --------------------------------------------------------
