@@ -136,11 +136,11 @@
   })();
 
   /* --------------------------------------------------------
-     4. COPIAR CHAVE PIX (com fallback) + toast acessível
+     4. COPIAR LINK (com fallback) + toast acessível
      -------------------------------------------------------- */
-  (function copyPix(){
-    var btn   = document.getElementById('copy-pix');
-    var key   = document.getElementById('pix-key').textContent.trim();
+  (function copylink(){
+    var btn   = document.getElementById('copy-link');
+    var key   = document.getElementById('link-key').textContent.trim();
     var toast = document.getElementById('toast');
     var timer;
 
