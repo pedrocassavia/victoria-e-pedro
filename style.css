@@ -341,6 +341,7 @@ section{position:relative;}
 .info-card .name{font-family:var(--serif);font-size:1.5rem;margin-bottom:1.1rem;}
 .info-card .meta{font-size:.82rem;letter-spacing:.16em;text-transform:uppercase;color:var(--brown);}
 .info-card .meta span{display:block;margin:.35rem 0;font-weight:500;}
+.info-card .btn{margin-top:1.6rem;padding:12px 26px;font-size:.68rem;}
 
 .lead{max-width:var(--maxread);margin:0 auto 3rem;color:#4a3f37;}
 
