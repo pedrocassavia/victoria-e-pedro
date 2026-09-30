@@ -369,19 +369,19 @@ section{position:relative;}
 .attire__text .em{font-family:var(--serif);font-size:1.5rem;color:var(--black);margin-bottom:1.4rem;}
 
 /* ============================================================
-   14. PRESENTES / PIX
+   14. PRESENTES
    ============================================================ */
 .gifts{background:var(--black);color:var(--offwhite);}
 .gifts .eyebrow{color:#e0b89e;}
 .gifts .section-title{color:var(--white);}
 .gifts .divider{background:#e0b89e;}
 .gifts p{color:#d8cdc4;}
-.pix-box{
+.link-box{
   margin-top:2.6rem;display:inline-flex;align-items:center;gap:14px;flex-wrap:wrap;justify-content:center;
   background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.2);padding:18px 26px;border-radius:2px;
 }
-.pix-key{font-family:var(--sans);letter-spacing:.04em;font-size:.95rem;color:var(--white);}
-.pix-box .btn{padding:12px 26px;font-size:.68rem;}
+.link-key{font-family:var(--sans);letter-spacing:.04em;font-size:.95rem;color:var(--white);}
+.link-box .btn{padding:12px 26px;font-size:.68rem;}
 .toast{
   position:fixed;left:50%;bottom:34px;transform:translateX(-50%) translateY(20px);
   background:var(--white);color:var(--black);padding:14px 30px;
@@ -454,9 +454,9 @@ footer .fmsg{font-family:var(--serif);font-style:italic;color:#5a4d44;font-size:
 
   .count-grid{display:grid;grid-template-columns:1fr 1fr;gap:34px 0;max-width:300px;margin:0 auto;}
   .count-num{font-size:3rem;}
-  .pix-box{flex-direction:column;width:100%;gap:18px;padding:22px 20px;}
-  .pix-key{font-size:.86rem;word-break:break-all;text-align:center;}
-  .pix-box .btn{width:100%;}
+  .link-box{flex-direction:column;width:100%;gap:18px;padding:22px 20px;}
+  .link-key{font-size:.86rem;word-break:break-all;text-align:center;}
+  .link-box .btn{width:100%;}
   .btn{padding:15px 30px;}
   .card,.info-card{padding:34px 26px;}
   .toast{width:calc(100% - 40px);text-align:center;font-size:.66rem;}
