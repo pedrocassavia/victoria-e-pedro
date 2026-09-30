@@ -135,38 +135,4 @@
     else if (mq.addListener){ mq.addListener(handleMq); }   /* fallback navegadores antigos */
   })();
 
-  /* --------------------------------------------------------
-     4. COPIAR LINK (com fallback) + toast acessível
-     -------------------------------------------------------- */
-  (function copylink(){
-    var btn   = document.getElementById('copy-link');
-    var key   = document.getElementById('link-key').textContent.trim();
-    var toast = document.getElementById('toast');
-    var timer;
-
-    function showToast(){
-      toast.classList.add('show');
-      clearTimeout(timer);
-      timer = setTimeout(function(){ toast.classList.remove('show'); }, 2600);
-    }
-
-    btn.addEventListener('click', function(){
-      if (navigator.clipboard && navigator.clipboard.writeText){
-        navigator.clipboard.writeText(key).then(showToast).catch(legacyCopy);
-      } else {
-        legacyCopy();
-      }
-    });
-
-    function legacyCopy(){
-      var t = document.createElement('textarea');
-      t.value = key; t.setAttribute('readonly','');
-      t.style.position = 'fixed'; t.style.opacity = '0';
-      document.body.appendChild(t); t.select();
-      try { document.execCommand('copy'); } catch(_){}
-      document.body.removeChild(t);
-      showToast();
-    }
-  })();
-
 })();
