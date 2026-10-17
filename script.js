@@ -6,12 +6,12 @@
   'use strict';
 
   /* --------------------------------------------------------
-     1. CONTAGEM REGRESSIVA — 26/12/2026 às 18h00 (BRT)
+     1. CONTAGEM REGRESSIVA — 26/12/2026 às 17h30 (BRT)
         • Sem limite de dígitos: funciona com qualquer nº de dias.
         • Atualiza o aria-label com texto legível por leitores de tela.
      -------------------------------------------------------- */
   (function countdown(){
-    var target = new Date('2026-12-26T18:00:00-03:00').getTime();
+    var target = new Date('2026-12-26T17:30:00-03:00').getTime();
     var grid = document.querySelector('.count-grid');
     var el = {
       d: document.getElementById('cd-days'),
